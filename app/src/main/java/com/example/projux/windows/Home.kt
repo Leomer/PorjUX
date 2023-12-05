@@ -63,8 +63,8 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Image(painter = painterResource(id = R.drawable.anulacion), contentDescription = "qr",
-                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Image(painter = painterResource(id = R.drawable.anulacion), contentDescription = "cancel",
+                modifier = Modifier.clickable { navController?.navigate(Screen.CancelScreen.route)})
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -74,8 +74,8 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Image(painter = painterResource(id = R.drawable.preautorizacion), contentDescription = "qr",
-                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Image(painter = painterResource(id = R.drawable.preautorizacion), contentDescription = "pre_authorization",
+                modifier = Modifier.clickable { navController?.navigate(Screen.PreAuthorizationScreen.route)})
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -85,8 +85,8 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Image(painter = painterResource(id = R.drawable.reportes), contentDescription = "qr",
-                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Image(painter = painterResource(id = R.drawable.reportes), contentDescription = "report",
+                modifier = Modifier.clickable { navController?.navigate(Screen.ReportScreen.route)})
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -96,8 +96,8 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Image(painter = painterResource(id = R.drawable.cierre), contentDescription = "qr",
-                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Image(painter = painterResource(id = R.drawable.cierre), contentDescription = "close",
+                modifier = Modifier.clickable { navController?.navigate(Screen.CloseScreen.route)})
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -107,8 +107,8 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Image(painter = painterResource(id = R.drawable.ayuda), contentDescription = "qr",
-                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Image(painter = painterResource(id = R.drawable.ayuda), contentDescription = "help",
+                modifier = Modifier.clickable { navController?.navigate(Screen.HelpScreen.route)})
         }
 
 
