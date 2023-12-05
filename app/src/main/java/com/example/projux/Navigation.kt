@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.projux.windows.Home
+import com.example.projux.windows.PurchaseScreen
 import com.example.projux.windows.Screen
 
 @Composable
@@ -13,6 +14,9 @@ fun Navigation() {
     NavHost(navController =  navController, startDestination = Screen.HomeScreen.route) {
         composable(route = Screen.HomeScreen.route) {
             Home(navController = navController)
+        }
+        composable(route = Screen.PurchaseScreen.route) {
+            PurchaseScreen(navController = navController)
         }
     }
 }
