@@ -54,8 +54,63 @@ fun Home(navController: NavController?) {
                     modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
             }
 
-
         }
+
+        Spacer(modifier = Modifier.height(50.dp))
+
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 15.dp)
+        ) {
+            Image(painter = painterResource(id = R.drawable.anulacion), contentDescription = "qr",
+                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 15.dp)
+        ) {
+            Image(painter = painterResource(id = R.drawable.preautorizacion), contentDescription = "qr",
+                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 15.dp)
+        ) {
+            Image(painter = painterResource(id = R.drawable.reportes), contentDescription = "qr",
+                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 15.dp)
+        ) {
+            Image(painter = painterResource(id = R.drawable.cierre), contentDescription = "qr",
+                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 15.dp)
+        ) {
+            Image(painter = painterResource(id = R.drawable.ayuda), contentDescription = "qr",
+                modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+        }
+
 
 
     }
