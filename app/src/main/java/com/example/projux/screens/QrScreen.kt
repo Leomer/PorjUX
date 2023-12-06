@@ -1,4 +1,4 @@
-package com.example.projux.windows
+package com.example.projux.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,14 +11,14 @@ import androidx.navigation.NavController
 import com.example.projux.component.Header
 
 @Composable
-fun PurchaseScreen(navController: NavController?){
+fun QrScreen(navController: NavController?){
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Header()
         }
-        
+
         Text(text = "purchase")
 
     }

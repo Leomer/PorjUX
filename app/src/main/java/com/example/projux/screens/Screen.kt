@@ -1,4 +1,4 @@
-package com.example.projux.windows
+package com.example.projux.screens
 
 sealed class Screen (val route: String) {
     object HomeScreen: Screen("home_screen")

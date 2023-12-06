@@ -1,6 +1,5 @@
-package com.example.projux.windows
+package com.example.projux.screens
 
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -12,10 +11,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -24,8 +21,7 @@ import com.example.projux.R
 import com.example.projux.component.Header
 
 @Composable
-fun Home(navController: NavController?) {
-    val context = LocalContext.current
+fun HomeScreen(navController: NavController?) {
     Column (
         modifier = Modifier.fillMaxSize()
     ) {
@@ -40,16 +36,14 @@ fun Home(navController: NavController?) {
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         ) {
-            Box (
-            ) {
+            Box {
                 Image(painter = painterResource(id = R.drawable.purchase), contentDescription = "purchase",
                     modifier = Modifier.clickable { navController?.navigate(Screen.PurchaseScreen.route)})
             }
 
             Spacer(modifier = Modifier.width(35.dp))
 
-            Box (
-            ) {
+            Box {
                 Image(painter = painterResource(id = R.drawable.qr), contentDescription = "qr",
                     modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
             }
@@ -119,6 +113,6 @@ fun Home(navController: NavController?) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun HomePrev() {
-    Home(null)
+fun HomeScreenPrev() {
+    HomeScreen(null)
 }
