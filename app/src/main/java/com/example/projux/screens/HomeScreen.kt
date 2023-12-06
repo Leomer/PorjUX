@@ -1,5 +1,6 @@
 package com.example.projux.screens
 
+import android.content.ClipData.Item
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -22,88 +24,94 @@ import com.example.projux.component.Header
 
 @Composable
 fun HomeScreen(navController: NavController?) {
-    Column (
+    LazyColumn (
         modifier = Modifier.fillMaxSize()
     ) {
-        Box(modifier = Modifier.fillMaxWidth()) {
-            Header()
-        }
+        item {
+            Box(modifier = Modifier.fillMaxWidth()) {
+                Header()
+            }
+            Spacer(modifier = Modifier.height(30.dp))
 
-        Spacer(modifier = Modifier.height(30.dp))
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Box {
+                    Image(painter = painterResource(id = R.drawable.purchase), contentDescription = "purchase",
+                        modifier = Modifier.clickable { navController?.navigate(Screen.PurchaseScreen.route)})
+                }
 
-        Row (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Box {
-                Image(painter = painterResource(id = R.drawable.purchase), contentDescription = "purchase",
-                    modifier = Modifier.clickable { navController?.navigate(Screen.PurchaseScreen.route)})
+                Spacer(modifier = Modifier.width(35.dp))
+
+                Box {
+                    Image(painter = painterResource(id = R.drawable.qr), contentDescription = "qr",
+                        modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+                }
+
             }
 
-            Spacer(modifier = Modifier.width(35.dp))
+            Spacer(modifier = Modifier.height(50.dp))
 
-            Box {
-                Image(painter = painterResource(id = R.drawable.qr), contentDescription = "qr",
-                    modifier = Modifier.clickable { navController?.navigate(Screen.QrScreen.route)})
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Image(painter = painterResource(id = R.drawable.anulacion), contentDescription = "cancel",
+                    modifier = Modifier.clickable { navController?.navigate(Screen.CancelScreen.route)})
             }
 
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Image(painter = painterResource(id = R.drawable.preautorizacion), contentDescription = "pre_authorization",
+                    modifier = Modifier.clickable { navController?.navigate(Screen.PreAuthorizationScreen.route)})
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Image(painter = painterResource(id = R.drawable.reportes), contentDescription = "report",
+                    modifier = Modifier.clickable { navController?.navigate(Screen.ReportScreen.route)})
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Image(painter = painterResource(id = R.drawable.cierre), contentDescription = "close",
+                    modifier = Modifier.clickable { navController?.navigate(Screen.CloseScreen.route)})
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp)
+            ) {
+                Image(painter = painterResource(id = R.drawable.ayuda), contentDescription = "help",
+                    modifier = Modifier.clickable { navController?.navigate(Screen.HelpScreen.route)})
+            }
         }
 
-        Spacer(modifier = Modifier.height(50.dp))
 
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Image(painter = painterResource(id = R.drawable.anulacion), contentDescription = "cancel",
-                modifier = Modifier.clickable { navController?.navigate(Screen.CancelScreen.route)})
-        }
 
-        Spacer(modifier = Modifier.height(20.dp))
 
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Image(painter = painterResource(id = R.drawable.preautorizacion), contentDescription = "pre_authorization",
-                modifier = Modifier.clickable { navController?.navigate(Screen.PreAuthorizationScreen.route)})
-        }
 
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Image(painter = painterResource(id = R.drawable.reportes), contentDescription = "report",
-                modifier = Modifier.clickable { navController?.navigate(Screen.ReportScreen.route)})
-        }
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Image(painter = painterResource(id = R.drawable.cierre), contentDescription = "close",
-                modifier = Modifier.clickable { navController?.navigate(Screen.CloseScreen.route)})
-        }
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 15.dp)
-        ) {
-            Image(painter = painterResource(id = R.drawable.ayuda), contentDescription = "help",
-                modifier = Modifier.clickable { navController?.navigate(Screen.HelpScreen.route)})
-        }
 
 
 

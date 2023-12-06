@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.projux.component.CustomButton
 import com.example.projux.component.Header
+import com.example.projux.component.HeaderBack
 
 
 var index = 0
@@ -47,7 +48,7 @@ fun PurchaseScreen(navController: NavController?){
         Box(
             modifier = Modifier.fillMaxWidth()
         ) {
-            Header()
+            HeaderBack(navController)
         }
 
         Spacer(modifier = Modifier.height(50.dp))
@@ -71,7 +72,9 @@ fun PurchaseScreen(navController: NavController?){
         Spacer(modifier = Modifier.height(50.dp))
 
         Box(
-            Modifier.fillMaxWidth()
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 100.dp)
         ) {
             var text by remember { mutableStateOf("") }
 

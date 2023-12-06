@@ -27,13 +27,13 @@ fun Navigation() {
         composable(route = Screen.QrScreen.route) { QrScreen(navController = navController) }
         composable(route = Screen.QrScreenImage.route) { QrView(navController = navController) }
 
-        composable(route = Screen.CancelScreen.route) { PurchaseScreen(navController = navController) }
-        composable(route = Screen.PreAuthorizationScreen.route) { PurchaseScreen(navController = navController) }
+        composable(route = Screen.CancelScreen.route) { HomeScreen(navController = navController) }
+        composable(route = Screen.PreAuthorizationScreen.route) { HomeScreen(navController = navController) }
 
         composable(route = Screen.ReportScreen.route) { ReportScreen(navController = navController) }
 
-        composable(route = Screen.CloseScreen.route) { PurchaseScreen(navController = navController) }
-        composable(route = Screen.HelpScreen.route) { PurchaseScreen(navController = navController) }
+        composable(route = Screen.CloseScreen.route) { HomeScreen(navController = navController) }
+        composable(route = Screen.HelpScreen.route) { HomeScreen(navController = navController) }
 
     }
 }
