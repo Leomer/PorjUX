@@ -8,6 +8,7 @@ import com.example.projux.screens.HomeScreen
 import com.example.projux.screens.PurchaseReadScreen
 import com.example.projux.screens.PurchaseScreen
 import com.example.projux.screens.QrScreen
+import com.example.projux.screens.ReportScreen
 import com.example.projux.screens.Screen
 import com.example.projux.views.PurchaseOK
 import com.example.projux.views.QrView
@@ -28,7 +29,9 @@ fun Navigation() {
 
         composable(route = Screen.CancelScreen.route) { PurchaseScreen(navController = navController) }
         composable(route = Screen.PreAuthorizationScreen.route) { PurchaseScreen(navController = navController) }
-        composable(route = Screen.ReportScreen.route) { PurchaseScreen(navController = navController) }
+
+        composable(route = Screen.ReportScreen.route) { ReportScreen(navController = navController) }
+
         composable(route = Screen.CloseScreen.route) { PurchaseScreen(navController = navController) }
         composable(route = Screen.HelpScreen.route) { PurchaseScreen(navController = navController) }
 

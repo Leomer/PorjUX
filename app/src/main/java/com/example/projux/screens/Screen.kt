@@ -12,6 +12,8 @@ sealed class Screen (val route: String) {
 
     object CancelScreen: Screen("cancel_screen")
     object PreAuthorizationScreen: Screen("pre_authorization_screen")
+
+    //reports
     object ReportScreen: Screen("report_screen")
     object CloseScreen: Screen("close_screen")
     object HelpScreen: Screen("help_screen")
