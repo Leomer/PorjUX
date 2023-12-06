@@ -25,6 +25,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -32,10 +33,11 @@ import androidx.navigation.NavController
 import com.example.projux.component.CustomButton
 import com.example.projux.component.Header
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
+
+var index = 0
+@OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun PurchaseScreen(navController: NavController?){
-
     val localContext =  LocalSoftwareKeyboardController.current
 
     Column(
@@ -84,7 +86,7 @@ fun PurchaseScreen(navController: NavController?){
                     .background(Color.LightGray),
                 placeholder = { Text("Ingrese el monto") },
                 keyboardOptions = KeyboardOptions(
-                    imeAction = androidx.compose.ui.text.input.ImeAction.Done,
+                    imeAction = ImeAction.Done,
                     keyboardType = KeyboardType.Number
                 ),
                 keyboardActions = KeyboardActions(
@@ -100,10 +102,11 @@ fun PurchaseScreen(navController: NavController?){
         Box {
             CustomButton(
                 title = "Continuar",
-                onClick = {},
+                onClick = {navController?.navigate(Screen.PurchaseReadScreen.route)},
                 backgroundColor = Color.Cyan)
         }
     }
+
 }
 
 @Preview(showBackground = true, showSystemUi = true)

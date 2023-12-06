@@ -62,6 +62,7 @@ dependencies {
 
     //Nav Host
     implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.compose.ui:ui-text-android:1.5.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
